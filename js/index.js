@@ -66,7 +66,17 @@ function initSwiper() {
 
 window.addEventListener('load', initSwiper);
 window.addEventListener('resize', () => {
-  swiper1.update();
-  swiper2.update();
+  // swiper1.update();
+  // swiper2.update();
   initSwiper();
 });
+
+
+document.addEventListener('click', (e) => {
+  if(e.target.classList.contains('scroll-btn')) {
+    document.querySelector('form').scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+})
