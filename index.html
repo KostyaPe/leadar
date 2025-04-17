@@ -14,7 +14,7 @@
   <section class="hero hide-mobile">
     <div class="container">
       <article class="hero__nav">
-        <button class="hero__login-button shadow scroll-btn">
+        <button class="hero__login-button shadow popup">
           Log in
         </button>
       </article>
@@ -29,40 +29,56 @@
         </article>
         <form action="" class="hero__form desktop-form shadow">
 
-          <button class="hero__google-sign-in">
-            Sign up with Google
-          </button>
-          <p class="alternative-text">
-            or
-          </p>
-          <div class="hero__input-box">
-            <label for="email">
-              Email
-            </label>
-            <input id="email" type="email" placeholder="e.g. Alex@email.com" required>
-          </div>
-          <div class="hero__input-box">
-            <label for="password">
-              Password
-            </label>
-            <input id="password" type="password" placeholder="8+ characters" minlength="8" required>
-          </div>
-          <button class="hero__google-sign-in mail">
-            Sign up with Google
-          </button>
-          <p class="hero__policy">
-            You hereby confirm that you are fully able and competent to access Livebeam and comply with the Terms of Use
-            &
-            Service, and are at least eighteen (18) years of age or the age of majority under the law of the
-            jurisdiction
-            of your residence and the one you are accessing Livebeam from.
-          </p>
-          <div class="hero__steps">
-            <div class="hero__step">
-
+          <div>
+            <button class="hero__google-sign-in">
+              Sign up with Google
+            </button>
+            <p class="alternative-text">
+              or
+            </p>
+            <div class="hero__input-box">
+              <label for="email">
+                Email
+              </label>
+              <input id="email" type="text" placeholder="e.g. Alex@email.com" required>
             </div>
-            <div class="hero__step active">
-
+            <div class="hero__input-box">
+              <label for="password">
+                Password
+              </label>
+              <input id="password" type="password" placeholder="8+ characters" minlength="8" required>
+            </div>
+            <button class="hero__google-sign-in mail">
+              Sign up with Google
+            </button>
+            <p class="hero__policy">
+              You hereby confirm that you are fully able and competent to access Livebeam and comply with the Terms of Use
+              &
+              Service, and are at least eighteen (18) years of age or the age of majority under the law of the
+              jurisdiction
+              of your residence and the one you are accessing Livebeam from.
+            </p>
+            <div class="hero__steps">
+              <div class="hero__step active">
+  
+              </div>
+              <div class="hero__step">
+  
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="img/checked.png" alt="">
+            <p class="reg__title">
+              Thank you for registering on our platform.
+            </p>
+            <div class="hero__steps">
+              <div class="hero__step">
+  
+              </div>
+              <div class="hero__step active">
+  
+              </div>
             </div>
           </div>
         </form>
@@ -433,6 +449,63 @@
       </div>
     </div>
   </section>
+  <div class="overlay">
+    <form action="" class="hero__form desktop-form modal shadow">
+
+      <div>
+        <button class="hero__google-sign-in">
+          Sign up with Google
+        </button>
+        <p class="alternative-text">
+          or
+        </p>
+        <div class="hero__input-box">
+          <label for="email">
+            Email
+          </label>
+          <input id="email" type="text" placeholder="e.g. Alex@email.com" required>
+        </div>
+        <div class="hero__input-box">
+          <label for="password">
+            Password
+          </label>
+          <input id="password" type="password" placeholder="8+ characters" minlength="8" required>
+        </div>
+        <button class="hero__google-sign-in mail">
+          Sign up with Google
+        </button>
+        <p class="hero__policy">
+          You hereby confirm that you are fully able and competent to access Livebeam and comply with the Terms of Use
+          &
+          Service, and are at least eighteen (18) years of age or the age of majority under the law of the
+          jurisdiction
+          of your residence and the one you are accessing Livebeam from.
+        </p>
+        <div class="hero__steps">
+          <div class="hero__step active">
+
+          </div>
+          <div class="hero__step">
+
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="img/checked.png" alt="">
+        <p class="reg__title">
+          Thank you for registering on our platform.
+        </p>
+        <div class="hero__steps">
+          <div class="hero__step">
+
+          </div>
+          <div class="hero__step active">
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/index.js"></script>
 </body>

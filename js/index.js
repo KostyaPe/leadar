@@ -1,7 +1,7 @@
 const swiper1 = new Swiper('.swiper', {
   slidesPerView: 1,
   spaceBetween: 0,
-  initialSlide:1,
+  initialSlide: 1,
   centeredSlides: true,
   loop: true,
   grabCursor: true,
@@ -17,7 +17,7 @@ const swiper1 = new Swiper('.swiper', {
     768: {
       slidesPerView: 'auto',
       spaceBetween: 41,
-      initialSlide:1,
+      initialSlide: 1,
     },
   }
 });
@@ -25,7 +25,7 @@ const swiper1 = new Swiper('.swiper', {
 const swiper2 = new Swiper('.testimonials-swiper', {
   slidesPerView: 1,
   spaceBetween: 0,
-  initialSlide:1,
+  initialSlide: 1,
   centeredSlides: true,
   loop: true,
   grabCursor: true,
@@ -88,3 +88,31 @@ document.addEventListener('click', (e) => {
     }
   }
 });
+
+
+document.querySelector('form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  document.querySelector('.hero__form > div:first-child').style = 'transform: translateX(800px)';
+  setTimeout(() => {
+    document.querySelector('.hero__form > div:last-child').style = 'transform: translateX(-50%) translateY(-50%)';
+  }, 300);
+})
+
+document.querySelector('form.modal').addEventListener('submit', (e) => {
+  e.preventDefault();
+  document.querySelector('.hero__form.modal > div:first-child').style = 'transform: translateX(800px)';
+  setTimeout(() => {
+    document.querySelector('.hero__form.modal > div:last-child').style = 'transform: translateX(-50%) translateY(-50%)';
+    document.querySelector('.overlay').addEventListener('click', () => {
+      document.querySelector('.overlay').style.display = 'none'
+    })
+  }, 300);
+});
+
+document.querySelector('.popup').addEventListener('click', () => {
+  document.querySelector('.overlay').style.display = 'flex';
+  setTimeout(() => {
+    document.querySelector('.modal').style.transform = 'translateY(0)';
+  }, 1)
+});
+

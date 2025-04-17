@@ -57,7 +57,10 @@ body {
 .hero .container {
   position: relative;
 }
-
+.reg__title {
+  font-size: 30px;
+  text-align: center;
+}
 .hero .container::after {
   content: "";
   position: absolute;
@@ -91,6 +94,24 @@ body {
   width: 100%;
 }
 
+.overlay {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.334);
+  z-index: 5;
+}
+
+.overlay .modal {
+  transform: translateY(-1500px);
+  transition: all 0.5s;
+}
+
 .hero__title {
   font-family: 'TrebuchetMS-Bold';
   font-weight: bold;
@@ -121,14 +142,37 @@ body {
 
 .hero__form {
   position: relative;
+  overflow: hidden;
   padding: 28px 53px;
   max-width: 483px;
   width: 100%;
   border-radius: 30px;
-  display: flex;
-  flex-direction: column;
   background-color: #fff;
   z-index: 2;
+
+}
+
+.hero__form > div {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.hero__form > div:last-child {
+  transform: translateX(-800px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__form > div:last-child img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 
 .hero__input-box {
@@ -218,6 +262,7 @@ body {
 .hero__step.active {
   background: #5893FA;
 }
+
 
 .show-mobile {
   display: none;
