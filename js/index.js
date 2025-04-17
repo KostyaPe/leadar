@@ -73,10 +73,18 @@ window.addEventListener('resize', () => {
 
 
 document.addEventListener('click', (e) => {
-  if(e.target.classList.contains('scroll-btn')) {
-    document.querySelector('form').scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+  if (e.target.classList.contains('scroll-btn')) {
+    const isMobile = window.innerWidth <= 768;
+
+    const form = isMobile
+      ? document.querySelector('.mobile-form')
+      : document.querySelector('.desktop-form');
+
+    if (form) {
+      form.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   }
-})
+});
