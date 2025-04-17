@@ -5,6 +5,11 @@ const swiper1 = new Swiper('.swiper', {
   centeredSlides: true,
   loop: true,
   grabCursor: true,
+  observer: true,
+  observeParents: true,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
   autoplay: {
     delay: 3000
   },
@@ -24,6 +29,11 @@ const swiper2 = new Swiper('.testimonials-swiper', {
   centeredSlides: true,
   loop: true,
   grabCursor: true,
+  observer: true,
+  observeParents: true,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
   autoplay: {
     delay: 3000
   },
@@ -42,11 +52,10 @@ function initSwiper() {
   if (window.innerWidth <= 768 && cardsSwiper === null) {
     cardsSwiper = new Swiper('.cardsSwiper', {
       slidesPerView: 1,
+      spaceBetween: 20,
       loop: true,
-      freeMode: true,
       autoplay: {
         delay: 3000,
-        disableOnInteraction: false,
       },
     });
   } else if (window.innerWidth > 768 && cardsSwiper !== null) {

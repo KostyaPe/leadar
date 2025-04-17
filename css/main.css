@@ -465,9 +465,7 @@ body {
 .testimonials {}
 
 .testimonials-swiper {
-  max-width: 2000px;
-  width: 100%;
-  overflow: hidden;
+
 }
 .testimonials-swiper .swiper-slide {
   width: 435px;
@@ -614,7 +612,21 @@ body {
 
 
 @media (max-width: 800px) {
-
+  .testimonials-swiper .swiper-slide {
+    width: 100%;
+    max-width: 100%;
+    height: 305px;
+  }
+  
+  .testimonials-swiper .swiper-wrapper {
+    overflow-x: visible;
+  }
+  
+  .testimonials-swiper img {
+    width: 100%;
+    max-width: 100%;
+    height: 305px;
+  }
   .hero__nav {
     display: none;
   }
@@ -646,7 +658,7 @@ body {
 
 @media (max-width: 768px) {
   .swiper {
-    padding: 40px 0;
+    padding: 0;
   }
 
   .swiper-wrapper {}
@@ -751,9 +763,32 @@ body {
   .hero .container::after {
     display: none;
   }
+
+  
+  .section__title {
+    font-size: 26px;
+  }
+
+  .testimonials__title {
+    text-align: left;
+    max-width: 271px;
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  .testimonials__subtitle {
+    max-width: 241px;
+    text-align: left;
+    margin: 35px 0;
+    padding-left: 10px;
+  }
 }
 
 @media (max-width: 468px) {
+
+  .about {
+    padding-top: 40px;
+  }
   .hide-mobile {
     display: none;
   }
@@ -801,7 +836,7 @@ body {
     justify-content: flex-end;
     background-image: url(../img/pic.png);
     background-size: 320px 443px;
-    background-position: left 14px bottom -12px;
+    background-position: left 63px bottom -12px;
     background-repeat: no-repeat;
   }
 
@@ -862,16 +897,13 @@ body {
   }
 
   .why__card-title::before {
-    left: 25px;
+    left: 10px;
   }
 
   .why__card-text {
     font-size: 16px;
   }
 
-  .section__title {
-    font-size: 26px;
-  }
 
   .why {
     position: relative;
@@ -890,7 +922,7 @@ body {
   }
 
   .streamer-girl {
-    margin: 59px auto;
+    margin: 59px auto 0;
 
   }
 
@@ -907,8 +939,12 @@ body {
   }
 }
 
-
-@media(max-width: 1600px) {
+@media (max-width: 380px) {
+  .hero-mob__downpart {
+    background-position: left 14px bottom -12px;
+  }
+}
+@media(min-width: 1600px) {
   .hero {
     min-height: 100vh;
   }
