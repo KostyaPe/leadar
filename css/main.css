@@ -773,13 +773,11 @@ body {
 
   .testimonials__title {
     text-align: left;
-    max-width: 271px;
     margin: 0;
     padding-left: 10px;
   }
 
   .testimonials__subtitle {
-    max-width: 241px;
     text-align: left;
     margin: 35px 0;
     padding-left: 10px;
